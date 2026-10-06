@@ -1,0 +1,34 @@
+/* Configuraciones globales y efectos estéticos adicionales */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #020617;
+    color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto sutil para las tarjetas de la galería */
+.group:hover div[class*="absolute inset-0 flex"] {
+    transform: scale(1.05);
+}
+
+/* Scrollbar personalizado para darle un toque más estilizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}

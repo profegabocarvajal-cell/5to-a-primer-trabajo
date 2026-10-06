@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5to A - Promo 32</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN para estilos rápidos y modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-['Poppins'] selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-wider bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent">
+                PROMO 32 <span class="text-xs block font-light tracking-widest text-slate-400">5TO AÑO</span>
+            </a>
+            
+            <!-- Menú de escritorio -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#inicio" class="hover:text-amber-400 transition-colors">Inicio</a>
+                <a href="#cuenta-regresiva" class="hover:text-amber-400 transition-colors">Gran Día</a>
+                <a href="#galeria" class="hover:text-amber-400 transition-colors">Recuerdos</a>
+                <a href="#muro" class="hover:text-amber-400 transition-colors">Muro de Deseos</a>
+            </nav>
+
+            <!-- Botón Menú Móvil -->
+            <button id="menu-btn" class="md:hidden text-slate-300 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex flex-col gap-4">
+            <a href="#inicio" class="mobile-link hover:text-amber-400 transition-colors">Inicio</a>
+            <a href="#cuenta-regresiva" class="mobile-link hover:text-amber-400 transition-colors">Gran Día</a>
+            <a href="#galeria" class="mobile-link hover:text-amber-400 transition-colors">Recuerdos</a>
+            <a href="#muro" class="mobile-link hover:text-amber-400 transition-colors">Muro de Deseos</a>
+        </div>
+    </header>
+
+    <!-- INICIO / HERO SECTION -->
+    <section id="inicio" class="min-h-screen pt-28 flex items-center justify-center relative overflow-hidden px-6">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,119,6,0.15),rgba(255,255,255,0))]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-6 animate-pulse">
+                La Generación Inolvidable
+            </span>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight mb-6 uppercase">
+                5to A <span class="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent block sm:inline">Promo 32</span>
+            </h1>
+            <p class="text-slate-400 text-base sm:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Cerramos una etapa dorada y abrimos las puertas al futuro. Años de risas, exámenes, proyectos y una hermandad que durará para siempre.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#muro" class="w-full sm:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-amber-500/20 text-center">
+                    Dejar un Mensaje
+                </a>
+                <a href="#galeria" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold rounded-xl transition-all text-center">
+                    Ver Recuerdos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUENTA REGRESIVA -->
+    <section id="cuenta-regresiva" class="py-24 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">La Cuenta Regresiva Ha Comenzado</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-12">Cada segundo nos acerca más al gran momento de la graduación.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                    <span id="days" class="text-4xl sm:text-6xl font-black text-amber-400 block mb-1">00</span>
+                    <span class="text-xs sm:text-sm text-slate-400 uppercase tracking-widest font-medium">Días</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                    <span id="hours" class="text-4xl sm:text-6xl font-black text-amber-400 block mb-1">00</span>
+                    <span class="text-xs sm:text-sm text-slate-400 uppercase tracking-widest font-medium">Horas</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                    <span id="minutes" class="text-4xl sm:text-6xl font-black text-amber-400 block mb-1">00</span>
+                    <span class="text-xs sm:text-sm text-slate-400 uppercase tracking-widest font-medium">Minutos</span>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                    <span id="seconds" class="text-4xl sm:text-6xl font-black text-amber-400 block mb-1">00</span>
+                    <span class="text-xs sm:text-sm text-slate-400 uppercase tracking-widest font-medium">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE RECUERDOS -->
+    <section id="galeria" class="py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-400 font-semibold uppercase tracking-widest text-xs sm:text-sm">Nuestros Momentos</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold mt-2">Galería Promo 32</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 aspect-square flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center font-bold text-2xl text-slate-700 tracking-wider group-hover:scale-110 transition-transform duration-500">5TO AÑO</div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <h3 class="font-bold text-lg text-amber-400">El Primer Día</h3>
+                        <p class="text-slate-300 text-sm">Listos para el reto final.</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 aspect-square flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center font-bold text-2xl text-slate-700 tracking-wider group-hover:scale-110 transition-transform duration-500">PROMO 32</div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <h3 class="font-bold text-lg text-amber-400">Convivencias y Risas</h3>
+                        <p class="text-slate-300 text-sm">Momentos fuera del salón.</p>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 aspect-square flex items-center justify-center sm:col-span-2 lg:col-span-1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center font-bold text-2xl text-slate-700 tracking-wider group-hover:scale-110 transition-transform duration-500">FASE FINAL</div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                        <h3 class="font-bold text-lg text-amber-400">La Meta Cerca</h3>
+                        <p class="text-slate-300 text-sm">Trabajando juntos hasta el último día.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MURO DE DESEOS INTERACTIVO -->
+    <section id="muro" class="py-28 bg-slate-900/50 border-t border-slate-800/80 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-400 font-semibold uppercase tracking-widest text-xs sm:text-sm">Deja tu huella</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold mt-2">Muro de Deseos</h2>
+                <p class="text-slate-400 mt-2">Escribe un mensaje para tus compañeros o un recuerdo que quieras immortalizar.</p>
+            </div>
+
+            <!-- Formulario -->
+            <form id="message-form" class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl mb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Tu Nombre / Apodo</label>
+                        <input type="text" id="author-name" required placeholder="Ej. Carlos 5to A" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Para quién es</label>
+                        <input type="text" id="recipient-name" placeholder="Ej. A todo el salón" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Tu Mensaje</label>
+                    <textarea id="message-text" rows="4" required placeholder="Escribe tu dedicatoria aquí..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-500 transition-colors resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-amber-500/20">
+                    Publicar en el Muro
+                </button>
+            </form>
+
+            <!-- Contenedor Dinámico de Mensajes -->
+            <div id="messages-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Mensaje por defecto de ejemplo -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative shadow-md">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="font-bold text-amber-400">Prof. de Química</span>
+                        <span class="text-xs text-slate-500">Hace un momento</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">"Mucho éxito muchachos de la Promo 32. Demuestren todo lo que aprendieron y de lo que son capaces."</p>
+                    <span class="text-xs bg-slate-800 text-slate-400 px-3 py-1 rounded-full inline-block">Para: 5to Año A</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm px-6">
+        <p>&copy; 2026 Promo 32 - 5to Año A. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
